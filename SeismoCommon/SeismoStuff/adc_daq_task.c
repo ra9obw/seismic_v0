@@ -298,19 +298,12 @@ static void prvGarbageTask( void *pvParameters )
 				if(++kk == 32)
 				{
 					kk = 0;
-					vTaskDelay(100);
+					vTaskDelay(5);
 				}
-	//			}
-	//
-	//
-	////			print_pll_status();
-	//
-	//			adc0_dt_wr_addr=0;
-	//
 
 			}
 
-			vTaskDelay(1000);
+			vTaskDelay(50);
 
 			fstat(adc0_samples, ADC_DUMP_NUM, &adc_mean, &adc_std, &adc_p2p);
 //			printf("adc0: %i\t\t%i\t\t%i\n", (int)adc_mean, (int)adc_std, (int)adc_p2p);
