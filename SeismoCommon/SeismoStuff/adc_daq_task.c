@@ -175,9 +175,9 @@ void ERU0_3_IRQHandler(void)//void adc_drdy_irq_routing(void/**handle*/)
 		xTaskToNotify = NULL;
 	}
 
-	portEND_SWITCHING_ISR(xHigherPriorityTaskWoken);
-
 	DIGITAL_IO_ToggleOutput(&LED_0);
+
+	portEND_SWITCHING_ISR(xHigherPriorityTaskWoken);
 }
 
 
