@@ -1,8 +1,11 @@
-Libraries/CMSIS
-Libraries/XMCLib
-Libraries/Newlib
+#Libraries/CMSIS
+#Libraries/XMCLib
+#Libraries/Newlib
 .settings
-Dave/Model
+#Dave/Model
 Release
 Debug
 *.bak
+Dave/Model/*.pin
+Dave/Model/*.bin
+Dave/Model/*.png
