@@ -6,6 +6,6 @@
 Release
 Debug
 *.bak
-Dave/Model/*.pin
-Dave/Model/*.bin
-Dave/Model/*.png
+#Dave/Model/*.pin
+#Dave/Model/*.bin
+#Dave/Model/*.png
