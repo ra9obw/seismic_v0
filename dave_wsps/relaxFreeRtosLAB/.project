@@ -200,7 +200,7 @@
 	<variableList>
 		<variable>
 			<name>FREERTOS_PATH</name>
-			<value>file:/D:/DAVEv4-64Bit/seismic_v0/160919_FreeRTOS_Labs</value>
+			<value>file:/D:/DAVEv4-64Bit/InfineonDave/160919_FreeRTOS_Labs</value>
 		</variable>
 	</variableList>
 </projectDescription>

@@ -125,6 +125,9 @@ void ERU0_3_IRQHandler(void)//void adc_drdy_irq_routing(void/**handle*/)
 {
 	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 
+
+	//DISABLE IRQ
+//	disable_adc_drdy_irq();
 	DIGITAL_IO_ToggleOutput(&LED_0);
 
 	{
@@ -148,25 +151,42 @@ void ERU0_3_IRQHandler(void)//void adc_drdy_irq_routing(void/**handle*/)
 			XMC_USIC_CH_TXFIFO_PutDataHPCMode(handle->channel, 0x0000U, (uint32_t)XMC_SPI_CH_MODE_STANDARD);
 
 		}
-		//Obtain pointer to data buffer while data are transfered via SPI
+		//
 		curr_adc_code_store = get_adc_code_store_ptr(&xHigherPriorityTaskWoken);
+		//wait latest spi channel busy status
 		//get data from all spi rx fifo`s
 		for(int ii=0; ii<ADC_COUNT; ++ii)
 		{
 			handle = ADC_handler_store[ii]->pspi;
-			//check SPI TX busy status
 			while((uint32_t)XMC_USIC_CH_GetTransmitBufferStatus(handle->channel) == (uint32_t)XMC_USIC_CH_TBUF_STATUS_BUSY) { 	}
-			//data from ADC comes in Big Endian format, convert it to LE during FIFO reading
 			((uint8_t*)(&curr_adc_code_store[ii]))[3] = (uint8_t)handle->channel->OUTR;
 			((uint8_t*)(&curr_adc_code_store[ii]))[2] = (uint8_t)handle->channel->OUTR;
 			((uint8_t*)(&curr_adc_code_store[ii]))[1] = (uint8_t)handle->channel->OUTR;
 			((uint8_t*)(&curr_adc_code_store[ii]))[0] = (uint8_t)handle->channel->OUTR;
+			//(*(pdata[ii])) = *((uint32_t*)rd_tmp);
 		}
 	}
 
+//	if(adc0_dt_wr_addr < ADC_DUMP_NUM)
+//	{
+//		uint32_t data_tmp;
+//		data_tmp = read_ADC_sample(&ADC0_handler);
+////		adc0_data_dump[adc0_dt_wr_addr] = data_tmp;
+////
+//		data_tmp = read_ADC_sample(&ADC1_handler);
+////		adc1_data_dump[adc0_dt_wr_addr] = data_tmp;
+////
+//		data_tmp = read_ADC_sample(&ADC2_handler);
+////		adc2_data_dump[adc0_dt_wr_addr] = data_tmp;
+////		read_ADC_all(ADC_handler_store, 3, adc_data_dump_store, adc0_dt_wr_addr);
+////		adc0_dt_wr_addr++;
+//
+//	}
+//	else
+//	{
+//
+//	}
 	//ACK IRQ
-	acknowledge_adc_drdy_irq();
-
 	if( xTaskToNotify != NULL )
 	{
 		/* Notify the task that the transmission is complete. */
@@ -175,9 +195,13 @@ void ERU0_3_IRQHandler(void)//void adc_drdy_irq_routing(void/**handle*/)
 		xTaskToNotify = NULL;
 	}
 
-	DIGITAL_IO_ToggleOutput(&LED_0);
+	acknowledge_adc_drdy_irq();
+	//ENA IRQ
+//	enable_adc_drdy_irq();
 
-	portEND_SWITCHING_ISR(xHigherPriorityTaskWoken);
+
+//	portEND_SWITCHING_ISR(xHigherPriorityTaskWoken);
+	DIGITAL_IO_ToggleOutput(&LED_0);
 }
 
 
@@ -274,12 +298,19 @@ static void prvGarbageTask( void *pvParameters )
 				if(++kk == 32)
 				{
 					kk = 0;
-					vTaskDelay(5);
+					vTaskDelay(100);
 				}
+	//			}
+	//
+	//
+	////			print_pll_status();
+	//
+	//			adc0_dt_wr_addr=0;
+	//
 
 			}
 
-			vTaskDelay(50);
+			vTaskDelay(1000);
 
 			fstat(adc0_samples, ADC_DUMP_NUM, &adc_mean, &adc_std, &adc_p2p);
 //			printf("adc0: %i\t\t%i\t\t%i\n", (int)adc_mean, (int)adc_std, (int)adc_p2p);
