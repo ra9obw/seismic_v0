@@ -294,7 +294,7 @@ static void prvGarbageTask( void *pvParameters )
 				adc2_samples[adc0_dt_rd_addr] = (float)((int)adc_sample2-(int)0x80000000);//*ADC_QUANT
 
 
-				lUDPLoggingPrintf("\t%u\t%u\t%u\t%u\n", send_ind++, adc_sample0, adc_sample1, adc_sample2);
+//				lUDPLoggingPrintf("\t%u\t%u\t%u\t%u\n", send_ind++, adc_sample0, adc_sample1, adc_sample2);
 				if(++kk == 32)
 				{
 					kk = 0;

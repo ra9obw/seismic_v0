@@ -89,7 +89,7 @@
 /* FreeRTOS+TCP includes. */
 #include "FreeRTOS_IP.h"
 #include "FreeRTOS_Sockets.h"
-#include "FreeRTOS_tcp_server.h"
+//#include "FreeRTOS_tcp_server.h"
 #include "FreeRTOS_Stream_Buffer.h"
 #include "FreeRTOS_DHCP.h"
 #include "NetworkInterface.h"

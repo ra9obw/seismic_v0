@@ -77,8 +77,49 @@
 			<type>2</type>
 			<locationURI>FREERTOS_PATH/FreeRTOS-Plus/Demo/Common</locationURI>
 		</link>
+		<link>
+			<name>XMC4500_FreeRTOS_NetifDrv</name>
+			<type>2</type>
+			<locationURI>PARENT-1-WORKSPACE_LOC/FreeRTOS_TCP_Eth_drv/XMC4500</locationURI>
+		</link>
 	</linkedResources>
 	<filteredResources>
+		<filter>
+			<id>1583307289482</id>
+			<name>Standard_Demos_and_Utils</name>
+			<type>9</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-Demo_IP_Protocol*</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1583307289491</id>
+			<name>Standard_Demos_and_Utils</name>
+			<type>9</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-*UDP*</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1583306034425</id>
+			<name>FreeRTOS+TCP/portable</name>
+			<type>9</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-BufferManagement</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1583306034433</id>
+			<name>FreeRTOS+TCP/portable</name>
+			<type>9</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-Compiler</arguments>
+			</matcher>
+		</filter>
 		<filter>
 			<id>1486441227597</id>
 			<name>FreeRTOS_Source/portable</name>
@@ -98,39 +139,30 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1486520243813</id>
-			<name>Standard_Demos_and_Utils/FreeRTOS_Plus_CLI_Demos</name>
-			<type>5</type>
+			<id>1583307345656</id>
+			<name>Standard_Demos_and_Utils/Demo_IP_Protocols</name>
+			<type>10</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-File-related-CLI-commands.c</arguments>
+				<arguments>1.0-name-matches-false-false-NTP</arguments>
 			</matcher>
 		</filter>
 		<filter>
-			<id>1486520243820</id>
-			<name>Standard_Demos_and_Utils/FreeRTOS_Plus_CLI_Demos</name>
+			<id>1583306053072</id>
+			<name>FreeRTOS+TCP/portable/BufferManagement</name>
 			<type>5</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-Sample-CLI-commands.c</arguments>
+				<arguments>1.0-name-matches-false-false-*_2.c</arguments>
 			</matcher>
 		</filter>
 		<filter>
-			<id>1486520243829</id>
-			<name>Standard_Demos_and_Utils/FreeRTOS_Plus_CLI_Demos</name>
-			<type>5</type>
+			<id>1583306063800</id>
+			<name>FreeRTOS+TCP/portable/Compiler</name>
+			<type>9</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-UDPCommandConsole.c</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1486520243836</id>
-			<name>Standard_Demos_and_Utils/FreeRTOS_Plus_CLI_Demos</name>
-			<type>5</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-TCP-related-CLI-commands.c</arguments>
+				<arguments>1.0-name-matches-false-false-GCC</arguments>
 			</matcher>
 		</filter>
 		<filter>

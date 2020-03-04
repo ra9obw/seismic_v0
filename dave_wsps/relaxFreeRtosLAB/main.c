@@ -26,10 +26,10 @@
 #include "ff_sddisk.h"
 
 /* Demo application includes. */
-#include "TCPEchoClient_SingleTasks.h"
-#include "SimpleTCPEchoServer.h"
+//#include "TCPEchoClient_SingleTasks.h"
+//#include "SimpleTCPEchoServer.h"
 #include "hr_gettime.h"
-#include "UDPLoggingPrintf.h"
+//#include "UDPLoggingPrintf.h"
 
 #include "adc_daq_task.h"
 
@@ -92,8 +92,8 @@ See http://www.freertos.org/FreeRTOS-Plus/FreeRTOS_Plus_TCP/TCP_Echo_Server.html
 #define mainCREATE_HTTP_SERVER 					0
 #define mainCREATE_UDP_CLI_TASKS				0
 #define mainCREATE_TCP_ECHO_CLIENT_TASKS_SINGLE	0
-#define mainCREATE_SIMPLE_TCP_ECHO_SERVER		1
-#define mainCREATE_UDP_LOGGING_TASK 			1
+#define mainCREATE_SIMPLE_TCP_ECHO_SERVER		0
+#define mainCREATE_UDP_LOGGING_TASK 			0
 
 /* FTP and HTTP servers execute in the TCP server work task. */
 #define mainTCP_SERVER_TASK_PRIORITY	( tskIDLE_PRIORITY + 3 )
@@ -995,6 +995,7 @@ void vApplicationStackOverflowHook( TaskHandle_t pxTask, char *pcTaskName )
 	for( ;; );
 }
 /*-----------------------------------------------------------*/
+uint32_t ulSeconds, ulMsec;
 UBaseType_t uxRand( void )
 {
 	const uint32_t ulMultiplier = 0x015a4e35UL, ulIncrement = 1UL;
@@ -1003,6 +1004,20 @@ UBaseType_t uxRand( void )
 
 	ulNextRand = ( ulMultiplier * ulNextRand ) + ulIncrement;
 	return( ( int ) ( ulNextRand >> 16UL ) & 0x7fffUL );
+}
+
+BaseType_t xApplicationGetRandomNumber( uint32_t *pulNumber )
+{
+	*pulNumber = uxRand();
+	return pdTRUE;
+}
+
+uint32_t ulApplicationGetNextSequenceNumber( uint32_t ulSourceAddress,
+													uint16_t usSourcePort,
+													uint32_t ulDestinationAddress,
+													uint16_t usDestinationPort )
+{
+	return (uint32_t)uxRand();
 }
 /*-----------------------------------------------------------*/
 
