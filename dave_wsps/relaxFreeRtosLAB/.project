@@ -30,73 +30,55 @@
 		<link>
 			<name>AD7177</name>
 			<type>2</type>
-			<locationURI>PARENT-1-WORKSPACE_LOC/SeismoCommon/AD7177</locationURI>
+			<locationURI>PROJECT_LOC/AD7177</locationURI>
 		</link>
 		<link>
 			<name>AD9548</name>
 			<type>2</type>
-			<locationURI>PARENT-1-WORKSPACE_LOC/SeismoCommon/AD9548</locationURI>
+			<locationURI>PROJECT_LOC/AD9548</locationURI>
 		</link>
 		<link>
 			<name>DAC1282</name>
 			<type>2</type>
-			<locationURI>PARENT-1-WORKSPACE_LOC/SeismoCommon/DAC1282</locationURI>
+			<locationURI>PROJECT_LOC/DAC1282</locationURI>
 		</link>
 		<link>
 			<name>FreeRTOS+CLI</name>
 			<type>2</type>
-			<locationURI>FREERTOS_PATH/FreeRTOS-Plus/Source/FreeRTOS-Plus-CLI</locationURI>
+			<locationURI>PROJECT_LOC/FreeRTOS+CLI</locationURI>
 		</link>
 		<link>
 			<name>FreeRTOS+FAT</name>
 			<type>2</type>
-			<locationURI>FREERTOS_PATH/FreeRTOS-Plus/Source/FreeRTOS-Plus-FAT</locationURI>
+			<locationURI>PROJECT_LOC/FreeRTOS+FAT</locationURI>
 		</link>
 		<link>
 			<name>FreeRTOS+TCP</name>
 			<type>2</type>
-			<locationURI>FREERTOS_PATH/FreeRTOS-Plus/Source/FreeRTOS-Plus-TCP</locationURI>
+			<locationURI>PROJECT_LOC/FreeRTOS+TCP</locationURI>
 		</link>
 		<link>
 			<name>FreeRTOS_Source</name>
 			<type>2</type>
-			<locationURI>FREERTOS_PATH/FreeRTOS/Source</locationURI>
+			<locationURI>PROJECT_LOC/FreeRTOS_Source</locationURI>
 		</link>
 		<link>
 			<name>HardwareAbstraction</name>
 			<type>2</type>
-			<locationURI>PARENT-1-WORKSPACE_LOC/SeismoCommon/HardwareAbstraction</locationURI>
+			<locationURI>PROJECT_LOC/HardwareAbstraction</locationURI>
 		</link>
 		<link>
 			<name>SeismoStuff</name>
 			<type>2</type>
-			<locationURI>PARENT-1-WORKSPACE_LOC/SeismoCommon/SeismoStuff</locationURI>
+			<locationURI>PROJECT_LOC/SeismoStuff</locationURI>
 		</link>
 		<link>
 			<name>Standard_Demos_and_Utils</name>
 			<type>2</type>
-			<locationURI>FREERTOS_PATH/FreeRTOS-Plus/Demo/Common</locationURI>
+			<locationURI>PROJECT_LOC/Standard_Demos_and_Utils</locationURI>
 		</link>
 	</linkedResources>
 	<filteredResources>
-		<filter>
-			<id>1486521254916</id>
-			<name>FreeRTOS+FAT/portable</name>
-			<type>9</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-common</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1486521254927</id>
-			<name>FreeRTOS+FAT/portable</name>
-			<type>9</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-XMC4500</arguments>
-			</matcher>
-		</filter>
 		<filter>
 			<id>1486441227597</id>
 			<name>FreeRTOS_Source/portable</name>
@@ -149,33 +131,6 @@
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
 				<arguments>1.0-name-matches-false-false-TCP-related-CLI-commands.c</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1488510645170</id>
-			<name>FreeRTOS+TCP/portable/BufferManagement</name>
-			<type>5</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-BufferAllocation_2.c</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1486520827927</id>
-			<name>FreeRTOS+TCP/portable/Compiler</name>
-			<type>9</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-GCC</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1486520880576</id>
-			<name>FreeRTOS+TCP/portable/NetworkInterface</name>
-			<type>9</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-XMC4500</arguments>
 			</matcher>
 		</filter>
 		<filter>

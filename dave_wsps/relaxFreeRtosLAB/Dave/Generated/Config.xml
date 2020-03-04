@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Project MotherSystem_Version="" Name="relaxFreeRtosLAB" Path="D:\DAVEv4-64Bit\wsp1\relaxFreeRtosLAB">
+<Project MotherSystem_Version="" Name="relaxFreeRtosLAB" Path="D:\DAVEv4-64Bit\seismic_v0\dave_wsps\relaxFreeRtosLAB">
     <COMPILER>
         <Name>ARM_GCC_HOME</Name>
         <Version/>
