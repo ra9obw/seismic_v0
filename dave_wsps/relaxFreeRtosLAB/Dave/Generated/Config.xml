@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Project MotherSystem_Version="" Name="relaxFreeRtosLAB" Path="D:\DAVEv4-64Bit\wsp1\relaxFreeRtosLAB">
+<Project MotherSystem_Version="" Name="relaxFreeRtosLAB" Path="D:\DAVEv4-64Bit\git_repo_test\relaxFreeRtosLAB">
     <COMPILER>
         <Name>ARM_GCC_HOME</Name>
         <Version/>
@@ -180,8 +180,8 @@
         <Path>\AD7177</Path>
         <Path>\AD9548</Path>
         <Path>\DAC1282</Path>
-        <Path>\SeismoStuff</Path>
         <Path>\HardwareAbstraction</Path>
+        <Path>\SeismoStuff</Path>
     </Include_Path>
     <Preprocessor_Symbols>
         <Assembler_Symbol>XMC4500_F100x1024=</Assembler_Symbol>
