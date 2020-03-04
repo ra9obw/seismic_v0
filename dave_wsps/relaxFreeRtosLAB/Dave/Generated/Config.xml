@@ -180,8 +180,8 @@
         <Path>\AD7177</Path>
         <Path>\AD9548</Path>
         <Path>\DAC1282</Path>
-        <Path>\SeismoStuff</Path>
         <Path>\HardwareAbstraction</Path>
+        <Path>\SeismoStuff</Path>
     </Include_Path>
     <Preprocessor_Symbols>
         <Assembler_Symbol>XMC4500_F100x1024=</Assembler_Symbol>
