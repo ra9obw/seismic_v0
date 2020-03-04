@@ -45,7 +45,7 @@
 		<link>
 			<name>FreeRTOS+CLI</name>
 			<type>2</type>
-			<locationURI>PROJECT_LOC/FreeRTOS+CLI</locationURI>
+			<locationURI>FREERTOS_PATH/FreeRTOS-Plus/Source/FreeRTOS-Plus-CLI</locationURI>
 		</link>
 		<link>
 			<name>FreeRTOS+FAT</name>
@@ -55,12 +55,12 @@
 		<link>
 			<name>FreeRTOS+TCP</name>
 			<type>2</type>
-			<locationURI>PROJECT_LOC/FreeRTOS+TCP</locationURI>
+			<locationURI>FREERTOS_PATH/FreeRTOS-Plus/Source/FreeRTOS-Plus-TCP</locationURI>
 		</link>
 		<link>
 			<name>FreeRTOS_Source</name>
 			<type>2</type>
-			<locationURI>PROJECT_LOC/FreeRTOS_Source</locationURI>
+			<locationURI>FREERTOS_PATH/FreeRTOS/Source</locationURI>
 		</link>
 		<link>
 			<name>HardwareAbstraction</name>
@@ -75,7 +75,7 @@
 		<link>
 			<name>Standard_Demos_and_Utils</name>
 			<type>2</type>
-			<locationURI>PROJECT_LOC/Standard_Demos_and_Utils</locationURI>
+			<locationURI>FREERTOS_PATH/FreeRTOS-Plus/Demo/Common</locationURI>
 		</link>
 	</linkedResources>
 	<filteredResources>
@@ -155,7 +155,7 @@
 	<variableList>
 		<variable>
 			<name>FREERTOS_PATH</name>
-			<value>file:/D:/DAVEv4-64Bit/InfineonDave/160919_FreeRTOS_Labs</value>
+			<value>file:/D:/DAVEv4-64Bit/FreeRTOSv10.3.1</value>
 		</variable>
 	</variableList>
 </projectDescription>
